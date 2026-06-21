@@ -14,3 +14,9 @@ class Graph:
 
     def get_degree(self, vertex):
         return len(self.get_neighbours(vertex))
+
+    def is_neighbour(self, vertex1, vertex2):
+        if (vertex1, vertex2) in self.edges or (vertex2, vertex1) in self.edges:
+            return True
+        else:
+            return False
